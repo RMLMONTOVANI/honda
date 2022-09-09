@@ -1,0 +1,10 @@
+const btnmenu = document.getElementById('btn-menu');
+const menu = document.getElementById('menu');
+
+
+function mostrarMenu(){
+    menu.style.display = 'block';
+}
+
+
+btnmenu.addEventListener('click', mostrarMenu);

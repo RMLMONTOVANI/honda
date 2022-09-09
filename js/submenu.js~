@@ -1,0 +1,20 @@
+const motos = document.getElementById('motos');
+const submenumotos = document.getElementById('submenu-motocicletas');
+
+function mostrarSubMenuMotos(){
+    const submenumotos = document.getElementById('submenu-motocicletas');
+
+    submenumotos.style.display = 'flex';
+}
+
+
+function esconderSubMenuMotos(){
+    const submenumotos = document.getElementById('submenu-motocicletas');
+
+    submenumotos.style.display = 'none';
+}
+
+
+
+motos.addEventListener('mouseover', mostrarSubMenuMotos);
+submenumotos.addEventListener('mouseout', esconderSubMenuMotos);

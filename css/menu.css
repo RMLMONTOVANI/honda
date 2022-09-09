@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #111;
+    height: 2900px;
+}
+
+#navbar{
+    height:80px;
+    background: #fff;
+    border-bottom: 1px solid #cc0000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    justify-content: space-between;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+   
+}
+
+#logo{
+    width: 250px;
+    display: flex;
+    
+}
+
+#logo-mobile{
+    display: none;
+}
+
+#logo-mobile img{
+    width: 80px;
+    
+}
+
+#menu{
+    height: 508px;
+    display: block;
+    flex-flow: column wrap;
+    overflow:scroll;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    transition: all 0.4s ease;
+    left: -300px;
+    z-index:1000;
+    align-items: center;
+}
+
+
+
+#menu a{
+    text-decoration: none;
+    
+    color: #5c5c5c;
+}
+
+.menu-items{
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+}
+
+
+#menu-motos{
+    
+    display: flex;
+    margin-right: 3%;
+   
+}
+
+
+
+#submenu-motos{
+    width: 100%;
+    display: flex;
+    background: #f5f5f5;
+    list-style: none;
+    justify-content: space-around;
+    position: absolute;;
+    top: -50px;
+    left: 0;
+    height:70px;
+    align-items: center;
+    transition: all 0.6s ease;
+    
+    z-index: -1001;
+}
+
+
+
+.btn-submenu{
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-submenu:hover{
+    color: #cc0000;
+}
+
+#navbar.active #menu{
+    display: block;
+    transform: translateX(300px);
+    
+    transition: all 0.4s ease;
+    
+}
+
+
+
+
+#btn-menu{
+    display: flex;
+    flex-flow: column wrap;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    
+}
+
+
+#hamburguer1{
+    margin-top: 5px;
+    width: 30px;
+    border-top: 2px solid black;
+    margin-bottom: -10px;
+    transition: all 0.3s ease;
+    
+}
+
+#hamburguer2{
+    margin-top: 2px;
+    width: 30px;
+    border-top: 2px solid;
+    margin-bottom: -10px;
+    transition: all 0.3s ease;
+}
+
+#hamburguer3{
+    margin-top: 2px;
+    width: 30px;
+    border-top: 2px solid;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+
+
+#navbar.active #hamburguer1{
+    border-top-color: transparent;
+    
+}
+
+
+#navbar.active #hamburguer2{
+    transform: rotate(145deg);
+    transition: all 0.3s ease;
+}
+
+#navbar.active #hamburguer3{
+    transform: rotate(-145deg);
+    transition: all 0.3s ease;
+    top: -10px;
+}
+
+
+.icone-vermelho{
+    display: none;
+}
+
+#pfechar{
+    display: none;
+}
+
+#navbar.active #pmenu{
+    display: none;
+}
+
+#navbar.active #pfechar{
+    display: block;
+}
+
+
+#navbar.active #menu .menu-items a:hover{
+    color: #cc0000;
+}
+
+
+#navbar.active #menu .menu-items:hover .icone-cinza {
+    display: none;
+    
+}
+
+#navbar.active #menu .menu-items:hover .icone-vermelho {
+    display: flex;
+}
+
+#navbar.active #menu .menu-items:hover a{
+    color: #cc0000;
+}
+
+
+#btn-menu-motos{
+    border: none;
+    background: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#menu-motos.active #submenu-motos{
+    transform: translateY(128px);
+    transition: all 0.2s ease;
+    height: 70px;
+    
+    display: flex;
+}
+
+#menu-motos.active #seta{
+    transform: rotate(180deg);
+}
+
+#margin-left-mobile{
+    margin-left: 15%;
+}
+
+#margin-right-mobile{
+    margin-right: 15%;
+}
+
+@media (max-width: 900px){
+    #navbar{
+	height:100px;
+	background: #fff;
+	border-bottom: 1px solid #cc0000;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 25px;
+	justify-content: space-between;
+	z-index: 100;
+	position: sticky;
+	top: 0;
+	
+    }
+
+    #menu{
+	top: 100px;
+	height: 100vh;
+	width: 100%;
+	left: -385px;
+    }
+
+    #navbar.active #menu{
+	display: block;
+	transform: translateX(385px);
+	
+	transition: all 0.4s ease;
+	
+    }
+
+    #logo{
+	display: none;
+    }
+    #logo-mobile img{
+	width: 80px;
+	
+    }
+
+    #logo-mobile{
+	display: flex;
+    }
+
+    #menu-motos{
+	
+	display: flex;
+	margin-right: 4%;
+	
+    }
+
+    #submenu-motos{
+	top: -200px;
+	gap: 50px;
+	flex-direction: column;
+	height: 300px;
+	align-items: start;
+	justify-content: center;
+	
+	
+    }
+
+    #submenu-motos li{
+	margin-left: 15px;
+    }
+
+    #margin-left-mobile{
+	margin-left: -0%;
+    }
+
+    #margin-right-mobile{
+	margin-right: -15%;
+    }
+
+    
+
+    #menu-motos.active #submenu-motos{
+	transform: translateY(300px);
+	transition: all 0.2s ease;
+	height: 300px;
+	
+	display: flex;
+    }
+}

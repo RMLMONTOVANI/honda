@@ -1,0 +1,6 @@
+const btnmenu = document.getElementById('btn-menu-motos');
+const submenu = document.getElementById('submenu-motos');
+const btnstreet = document.getElementById('btn-street');
+const btnadv = document.getElementById('btn-adv');
+const btnsport = document.getElementById('btn-sport');
+const btntour = document.getElementById('btn-tour');

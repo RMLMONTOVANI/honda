@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    
+}
+
+.art-amazonia{
+  grid-column: 2;
+    position: relative;
+    
+   
+}
+
+.art-amazonia p{
+    position: absolute;
+    left: 130px;
+    top: 200px;
+    font-size: 100px;
+}
+
+.art-amazonia img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+.noticias{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-flow: row nowrap;
+   
+    gap: 50px;
+    margin-top: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.pedro{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.pedro img{
+    width: 100%;
+    height: 100%;
+    
+}
